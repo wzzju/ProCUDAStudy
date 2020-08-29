@@ -4,3 +4,6 @@
 *.ptx
 *.cubin
 *.fatbin
+test/build
+vectorized_memory/build
+build
