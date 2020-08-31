@@ -1,4 +1,10 @@
 cmake_minimum_required(VERSION 3.10)
+
+# This must be done before any language is set
+# (ie: before any project() or enable_language() command).
+set(CMAKE_C_COMPILER "/usr/bin/gcc")
+set(CMAKE_CXX_COMPILER "/usr/bin/g++")
+
 project(vectorized)
 
 set(CMAKE_CXX_STANDARD 14)
