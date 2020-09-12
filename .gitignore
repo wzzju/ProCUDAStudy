@@ -6,4 +6,5 @@
 *.fatbin
 test/build
 vectorized_memory/build
+gperftools_test/build
 build
