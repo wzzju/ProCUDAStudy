@@ -70,11 +70,10 @@ int InnerMain(int argc, char** argv) {
   {
     auto cp = make_cpu_profiler("case1.perf");  // 启动性能分析
     auto str = "neir:automata"s;
-
+    // 正则表达式对象，下面reg和what放入循环里面将会产生性能瓶颈
+    auto reg = make_regex(R"(^(\w+)\:(\w+)$)");
+    auto what = make_match();
     for (int i = 0; i < 1000; i++) {               // 循环一千次
-      auto reg = make_regex(R"(^(\w+)\:(\w+)$)");  // 正则表达式对象
-      auto what = make_match();
-
       assert(regex_match(str, what, reg));  // 正则匹配
     }
   }
